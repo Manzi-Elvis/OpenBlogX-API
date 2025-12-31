@@ -1,0 +1,8 @@
+node_modules/
+# environment variables
+.env
+# build output
+dist/
+# logs
+logs/
+*.log

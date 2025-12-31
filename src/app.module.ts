@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common'
 import { MongooseModule } from '@nestjs/mongoose'
 import { ConfigModule, ConfigService } from '@nestjs/config'
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -15,6 +16,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
         uri: config.get<string>('MONGO_URI'),
       }),
     }),
+
+    AuthModule,
   ],
 })
 export class AppModule {}

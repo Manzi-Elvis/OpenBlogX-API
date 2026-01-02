@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
@@ -23,6 +24,8 @@ import { UsersController } from './users/users.controller';
     AuthModule,
 
     UsersModule,
+
+    PostsModule,
   ],
   controllers: [UsersController],
 })

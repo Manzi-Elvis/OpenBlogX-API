@@ -29,6 +29,8 @@ import { UploadModule } from './upload/upload.module';
     PostsModule,
 
     UploadModule,
+
+    UploadModule,
   ],
   controllers: [UsersController],
 })

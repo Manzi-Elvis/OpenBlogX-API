@@ -6,6 +6,7 @@ import { UsersService } from './users/users.service';
 import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
 import { PostsModule } from './posts/posts.module';
+import { UploadModule } from './upload/upload.module';
 
 @Module({
   imports: [
@@ -26,6 +27,8 @@ import { PostsModule } from './posts/posts.module';
     UsersModule,
 
     PostsModule,
+
+    UploadModule,
   ],
   controllers: [UsersController],
 })

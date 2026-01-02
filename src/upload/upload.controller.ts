@@ -22,6 +22,7 @@ export class UploadController {
   uploadImage(@UploadedFile() file: Express.Multer.File) {
     return {
       url: file.path,
+      public_id: file.filename,
     };
   }
 }

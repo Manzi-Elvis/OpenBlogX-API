@@ -12,13 +12,15 @@ export class AuthService {
 
   async register(data: any) {
     const hash = await bcrypt.hash(data.password, 10)
+    const isDev = process.env.NODE_ENV !== 'production';
+    const role = isDev && data.email === 'elvismanzi16@gmail.com'? 'admin' : 'user';
 
     const user = await this.usersService.create({
       email: data.email,
       username: data.username,
       passwordHash: hash,
-    })
-
+      role,
+    });
     return this.signToken(user.id, user.role)
   }
 

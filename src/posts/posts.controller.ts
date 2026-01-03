@@ -11,8 +11,9 @@ import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';
+import { Roles } from '../auth/decorators/roles.decorator';
 
-
+@Roles('admin')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Controller('posts')
 export class PostsController {

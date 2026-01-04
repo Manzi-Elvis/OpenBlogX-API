@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
 import { PostsModule } from './posts/posts.module';
 import { UploadModule } from './upload/upload.module';
+import { MediaController } from './media/media.controller';
 
 @Module({
   imports: [
@@ -32,6 +33,6 @@ import { UploadModule } from './upload/upload.module';
 
     UploadModule,
   ],
-  controllers: [UsersController],
+  controllers: [UsersController, MediaController],
 })
 export class AppModule {}
